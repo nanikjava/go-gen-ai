@@ -1,3 +1,9 @@
+| Publish Date       | Author                                        |
+| ---                | ---       |
+| September 14, 2025 | Nanik Tolaram (nanikjava@gmail.com)           |
+|                 |       |
+
+
 # go-genai
 
 Google Gemini provides a lot of different models for text, images and videos. To assist developer in developing AI application using the different models Google have come up with the `go-genai` [SDK](https://github.com/googleapis/go-genai). This free up developer to focus on their application rather than fiddling around with different calls and parameters when using the model. The SDK streamline the development process for different kind of data - text, image or video and have capability to support different kind of streaming modes.
