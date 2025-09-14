@@ -6,19 +6,24 @@
 
 # go-genai
 
-Google Gemini provides a lot of different models for text, images and videos. To assist developer in developing AI application using the different models Google have come up with the `go-genai` [SDK](https://github.com/googleapis/go-genai). This free up developer to focus on their application rather than fiddling around with different calls and parameters when using the model. The SDK streamline the development process for different kind of data - text, image or video and have capability to support different kind of streaming modes.
+Google Gemini provides a lot of different models for text, images and videos. To assist developer in developing AI application using the different models Google have come up with the `go-genai` [SDK](https://github.com/googleapis/go-genai). This frees up developer to focus on their application rather than fiddling around with different calls and parameters when using the model. The SDK streamline the development process for different kind of data - text, image or video and have capability to support different kind of streaming modes.
 
 In this article we will look at examples on how to use the SDK and at the same time try to look at what packages are provided inside the SDK.
 
 # Codespace setup
 
-The setup in this article is using Github codespace as it gives you the ability to work on a project without checking out the code on your local development machine. This article will look at the `master` branch of the SDK (commit - 2d9ef9f842da527ff7824ce9c456628edb27dffb). 
-
+Codespace is the easiest way to kick start using the code in this repo as it gives you the ability to work on a project without checking out the code on your local development machine. 
 ![alt text](1-1.png)
+
+Use the codespace menu as shown in the diagram below
+
+![alt text](1-1a.png)
+
+Once codespace is launched you are ready to work with the code in this repo as the Go tooling is included.
 
 # Example
 
-The code example for this article is an application that will send an image to Gemini and asked it to describe what kind of instrument it is. We will be using the gemini-2.0-flash model. Code can be seen inside the `code` folder.
+The code example for this article is an application that will send an image to the model and asked it to describe what kind of instrument it is. We will be using the `gemini-2.0-flash` model. Code can be seen inside the `code` folder.
 
 
 ## Running the code
@@ -27,7 +32,7 @@ Before running the code get an API from [Google AI Studio](https://aistudio.goog
 
 ![alt text](1-2.png)
 
-From the command line run the sample application as follows:
+Change to the `1/code` directory from the terminal and run the sample application as follows:
 
 ```
 GEMINI_API_KEY=<your_api_key> go run main.go
