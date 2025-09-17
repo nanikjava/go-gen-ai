@@ -46,12 +46,10 @@ func printResponse(resp *genai.GenerateContentResponse) {
 }
 
 func main() {
-	// Setup
 	ctx := context.Background()
-	apiKey := os.Getenv("GOOGLE_API_KEY")
+	apiKey := os.Getenv("GEMINI_API_KEY")
 	toolboxURL := "http://localhost:5000"
 
-	// Initialize the Google GenAI client using the explicit ClientConfig.
 	client, err := genai.NewClient(ctx, &genai.ClientConfig{
 		APIKey: apiKey,
 	})
@@ -68,23 +66,19 @@ func main() {
 	// Load the tools using the MCP Toolbox SDK.
 	tools, err := toolboxClient.LoadToolset("hotel", ctx)
 	if err != nil {
-		log.Fatalf("Failed to load tools: %v\nMake sure your Toolbox server is running and the tool is configured.", err)
+		log.Fatalf("Failed to load tools: %v", err)
 	}
 
 	genAITools := make([]*genai.Tool, len(tools))
 	toolsMap := make(map[string]*core.ToolboxTool, len(tools))
 
 	for i, tool := range tools {
-		// Convert the tools into usable format
 		genAITools[i] = ConvertToGenaiTool(tool)
-		// Add tool to a map for lookup later
 		toolsMap[tool.Name()] = tool
 	}
 
-	// Set up the generative model with the available tool.
 	modelName := "gemini-2.0-flash"
 
-	// query := "Find hotels in Basel with Basel in it's name and share the names with me"
 	query := `You are a hotel expert: 
 	You have been given a csv files containing hotel information
 	
