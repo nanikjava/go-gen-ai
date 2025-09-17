@@ -137,6 +137,14 @@ Toolbox is ready to be accessed and you can access by hitting the endpoint provi
 
 ![alt text](2.1.png)
 
+To ensure that Toolbox configuration are all set correctly click on the `search-hotels-by-name` tool as shown in the screenshot below
+
+![alt text](2.2.png)
+
+Once the tool is selected click on the `Run Tool` button and if everything is working correctly you will see the output as shown in the screenshot below:
+
+![alt text](2.3.png)
+
 Our tools are now ready to be used by the LLM to get the data it will required. Now, what's left running the application which we will see in the next section.
 
 # Simple Hotel Agent
