@@ -7,5 +7,4 @@ It is tailored for the Go programming language, with all code samples leveraging
 # Articles
 
 1. [Building using go-genai](1/1-go-genai.md)
-2. Building LangChainGo application 
-3. Building with genkit-go 
+2. [Building MCP using MCP Toolbox](2/2-mcp-go-genai.md)
